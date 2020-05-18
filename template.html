@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>{ front.title } - cxb</title>
+        <meta charset="utf-8">
+        {{ if front.description }}
+        <meta name="description" content="{ front.description }">
+        {{ endif }}
+        <meta name="keywords" content="{ front.tags | commasep }">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/index.css">
+    </head>
+    <body>
+        <header>
+            <h1>{ front.title }</h1>
+            {{ if front.subtitle }}
+            <small>{ front.subtitle | unescaped }</small>
+            {{ endif }}
+        </header>
+        { md_content | markdown }
+    </body>
+</html>
