@@ -15,7 +15,7 @@
         <header>
             <h1>{ front.title }</h1>
             {{ if front.subtitle }}
-            <small>{ front.subtitle | unescaped }</small>
+            <small>{ front.subtitle | markdown }</small>
             {{ endif }}
         </header>
         { md_content | markdown }
